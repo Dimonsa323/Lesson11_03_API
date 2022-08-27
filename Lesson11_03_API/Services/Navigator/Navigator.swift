@@ -11,7 +11,8 @@ import UIKit
     // MARK: - Protocol
 
 protocol NavigatorProtocol {
-    
+    func showNewHero(model: Futurama, view: UIViewController, networking: NetworkingProtocol)
+    func showFirstVC() -> UIViewController
 }
 
     // MARK: - Class Navigator
@@ -21,7 +22,13 @@ class Navigator: NavigatorProtocol {
     let assembler = Assembler()
     
     func showFirstVC() -> UIViewController {
-        let presenter = 
+        let vc = assembler.createFirstVC(navigator: self)
+        return vc 
+    }
+    
+    func showNewHero(model: Futurama, view: UIViewController, networking: NetworkingProtocol) {
+        let vc = assembler.createNewHero(model: model, networking: networking, navigator: self )
+        view.navigationController?.pushViewController(vc, animated: true)
     }
 }
 

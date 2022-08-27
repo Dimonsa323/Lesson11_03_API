@@ -15,7 +15,9 @@ struct Futurama: Decodable {
     let status: String
     let firstAppearance: String
     let picURL: String
-    let relatives, voicedBy, name: String
+    let relatives: String
+    let voicedBy: String
+    let name: String
 
     enum CodingKeys: String, CodingKey {
         case species = "Species"
