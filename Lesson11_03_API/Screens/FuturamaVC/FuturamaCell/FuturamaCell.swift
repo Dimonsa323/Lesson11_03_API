@@ -11,35 +11,23 @@ import UIKit
 
 class FuturamaCell: UITableViewCell {
     
+    // MARK: - IBOutlets
+    
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var imageUI: UIImageView!
+    @IBOutlet weak var imageUI: ImageView!
     
     
     // MARK: - Life Cycle
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        selectionStyle = .none
     }
     
     // MARK: - Methods
     
     func config(with model: Futurama) {
         nameLabel.text = model.name
-        loadAsyncImage(image: model.picURL) { image in
-            self.imageUI.image = image
+        imageUI.fetchImage(from: model.picURL)
         }
     }
-    
-    private func loadAsyncImage(image: String, closure: @escaping (UIImage) -> ()) {
-        DispatchQueue.global().async {
-            guard let url = URL(string: image) else { return }
-            guard let data = try? Data(contentsOf: url) else { return }
-            guard let image = UIImage(data: data) else { return }
-            
-            DispatchQueue.main.async {
-                closure(image)
-            }
-        }
-    }
-}

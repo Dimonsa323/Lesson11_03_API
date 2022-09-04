@@ -15,8 +15,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         window = UIWindow(frame: UIScreen.main.bounds)
         let navigator = Navigator()
-       // let networking = NetworkingService()
-        //let presenter = FuturamaPresenter(navigator: navigator, networking: networking)
         let vc = navigator.showFirstVC()
         
         window?.rootViewController = UINavigationController(rootViewController: vc)

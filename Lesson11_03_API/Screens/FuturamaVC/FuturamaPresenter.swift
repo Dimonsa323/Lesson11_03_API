@@ -8,15 +8,16 @@
 import Foundation
 import UIKit
 
-    // MARK: - Protocol
+// MARK: - Protocol
 
 protocol FuturamaPresenterProtocol {
+    
     var heroesFuturama: [Futurama] { get }
     func newHero(closure: @escaping () -> ())
-    func showNextScreen()
+    func showNextScreen(vc: UIViewController, closure: @escaping () -> ())
 }
 
-    // MARK: - Class
+// MARK: - Class
 
 class FuturamaPresenter: FuturamaPresenterProtocol {
     
@@ -36,14 +37,18 @@ class FuturamaPresenter: FuturamaPresenterProtocol {
     // MARK: - Method
     
     func newHero(closure: @escaping () -> ()) {
-        networking.newHero { heroesFuturama in
+        networking.newHero(stringURL: APIEndpoint.getHeroes.rawValue) { (heroesFuturama: [Futurama]) in
             self.heroesFuturama = heroesFuturama
             closure()
         }
     }
     
-    func showNextScreen() {
-        
-}
+    func showNextScreen(vc: UIViewController, closure: @escaping () -> ()) {
+        navigator.showNewHero(view: vc, networking: networking, navigator: navigator) { hero in
+            let hero = Futurama(model: hero)
+            self.heroesFuturama.append(hero)
+            closure()
+        }
+    }
 }
 

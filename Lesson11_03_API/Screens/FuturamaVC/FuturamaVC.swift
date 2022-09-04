@@ -10,11 +10,12 @@ import UIKit
     // MARK: - Class
 
 class FuturamaVC: UIViewController {
-
+    
     // MARK: - Properties
     
     private let presenter: FuturamaPresenterProtocol
     
+    // MARK: - IBOutlets
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -38,16 +39,18 @@ class FuturamaVC: UIViewController {
         presenter.newHero {
             self.tableView.reloadData()
         }
-        }
-     
+    }
+    
+    // MARK: - IBAction
+    
     @IBAction func addHeroButton() {
-        presenter.showNextScreen()
+        presenter.showNextScreen(vc: self) {
+            self.tableView.reloadData()
+        }
     }
 }
 
-
-
-    // MARK: - Private Extension
+// MARK: - Private Extension
 
 extension FuturamaVC {
     func setupUI() {
@@ -55,28 +58,24 @@ extension FuturamaVC {
     }
     
     func setupTableView() {
-        func setupTableView() {
-            tableView.delegate = self
-            tableView.dataSource = self
-            tableView.register(.init(nibName: String(describing: FuturamaCell.self), bundle: nil), forCellReuseIdentifier: String(describing: FuturamaCell.self))
-            
-        }
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(.init(nibName: String(describing: FuturamaCell.self), bundle: nil), forCellReuseIdentifier: String(describing: FuturamaCell.self))
     }
 }
-    
-    extension FuturamaVC: UITableViewDelegate, UITableViewDataSource {
-        
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            presenter.heroesFuturama.count
-        }
-        
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: FuturamaCell.self), for: indexPath) as! FuturamaCell
-            let hero = presenter.heroesFuturama[indexPath.row]
-            cell.config(with: hero )
 
-            return cell
-        }
+extension FuturamaVC: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        presenter.heroesFuturama.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: FuturamaCell.self), for: indexPath) as! FuturamaCell
+        let hero = presenter.heroesFuturama[indexPath.row]
+        cell.config(with: hero )
         
+        return cell
+    }
 }
 

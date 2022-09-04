@@ -12,19 +12,29 @@ import UIKit
 
 class Assembler {
     
+    // MARK: - Properties
+    
   private let networking = Networking()
+    
+    // MARK: - Method
     
     func createFirstVC(navigator: NavigatorProtocol) -> UIViewController {
         let presenter = FuturamaPresenter(navigator: navigator, networking: networking)
         let vc = FuturamaVC(presenter: presenter)
+        
         return vc 
     }
     
-    func createNewHero(model: Futurama, networking: NetworkingProtocol,
-                        navigator: NavigatorProtocol) -> UIViewController {
-        let presenter = NewHeroPresenter()
+    func createNewHero(networking: NetworkingProtocol,
+                        navigator: NavigatorProtocol, closure: @escaping (NewHero) -> ()) -> UIViewController {
+        let presenter = NewHeroPresenter(networking: networking, navigator: navigator, closure: closure)
         let vc = NewHeroVC(presenter: presenter)
-        
+        return vc
+    }
+    
+    func createUser() -> UIViewController {
+        let presenter = CreateUserPresenter()
+        let vc = CreateUserVC(presenter: presenter)
         return vc
     }
 }

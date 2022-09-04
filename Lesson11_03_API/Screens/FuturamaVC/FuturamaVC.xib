@@ -20,11 +20,12 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OVg-5B-6US">
-                    <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="740"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAK-7Z-Q5P">
-                    <rect key="frame" x="280.5" y="75" width="117.5" height="31"/>
+                    <rect key="frame" x="16" y="814" width="382" height="31"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Add New Hero"/>
                     <connections>
@@ -35,14 +36,15 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="OVg-5B-6US" secondAttribute="bottom" id="112-Nc-Fqs"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PAK-7Z-Q5P" secondAttribute="trailing" constant="16" id="20T-xD-eGj"/>
-                <constraint firstItem="OVg-5B-6US" firstAttribute="top" secondItem="PAK-7Z-Q5P" secondAttribute="bottom" constant="38" id="8go-4m-tbj"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OVg-5B-6US" secondAttribute="trailing" id="9dc-g7-b2T"/>
-                <constraint firstItem="OVg-5B-6US" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="Vsl-wr-jlM"/>
-                <constraint firstItem="OVg-5B-6US" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ssa-AD-WpR"/>
+                <constraint firstItem="PAK-7Z-Q5P" firstAttribute="top" secondItem="OVg-5B-6US" secondAttribute="bottom" constant="30" id="9LS-9K-Wy1"/>
+                <constraint firstItem="OVg-5B-6US" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="G8n-Ti-jUH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PAK-7Z-Q5P" secondAttribute="trailing" constant="16" id="IFb-CM-iVv"/>
+                <constraint firstItem="OVg-5B-6US" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Mas-Cu-52c"/>
+                <constraint firstItem="OVg-5B-6US" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="pkG-3F-a4c"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="PAK-7Z-Q5P" secondAttribute="bottom" constant="17" id="tVB-fL-olG"/>
+                <constraint firstItem="PAK-7Z-Q5P" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="xCa-II-tHd"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="97"/>
+            <point key="canvasLocation" x="137.68115942028987" y="96.428571428571431"/>
         </view>
     </objects>
     <resources>

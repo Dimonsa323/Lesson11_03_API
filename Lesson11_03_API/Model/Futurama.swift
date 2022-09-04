@@ -8,6 +8,7 @@
 import Foundation
 
 struct Futurama: Decodable {
+    
     let species: String
     let age: String
     let planet: String
@@ -30,5 +31,18 @@ struct Futurama: Decodable {
         case relatives = "Relatives"
         case voicedBy = "VoicedBy"
         case name = "Name"
+    }
+    
+    init(model: NewHero) {
+        self.species = ""
+        self.age = model.age
+        self.planet = ""
+        self.profession = ""
+        self.status = ""
+        self.firstAppearance = ""
+        self.picURL = ""
+        self.relatives = ""
+        self.voicedBy = ""
+        self.name = model.name
     }
 }

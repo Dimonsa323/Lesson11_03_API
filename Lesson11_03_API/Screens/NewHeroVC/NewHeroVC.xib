@@ -10,9 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewHeroVC" customModule="Lesson11_03_API" customModuleProvider="target">
             <connections>
-                <outlet property="imageTextField" destination="bXx-0R-o5w" id="4lQ-HL-eZV"/>
+                <outlet property="ageTextField" destination="9Xz-if-jUp" id="0Bi-5X-tx4"/>
+                <outlet property="imageViewOutlet" destination="sKC-zF-vGK" id="byI-Ah-M4u"/>
                 <outlet property="nameTextField" destination="eJl-nO-4aV" id="gOl-0t-a0n"/>
-                <outlet property="surnameTextField" destination="9Xz-if-jUp" id="G8n-wE-NoQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,33 +21,55 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Ock-sp-iPZ">
-                    <rect key="frame" x="16" y="194" width="382" height="145.5"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Ock-sp-iPZ">
+                    <rect key="frame" x="16" y="457" width="382" height="148"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Image " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bXx-0R-o5w">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJl-nO-4aV">
                             <rect key="frame" x="0.0" y="0.0" width="382" height="28.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJl-nO-4aV">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Xz-if-jUp">
                             <rect key="frame" x="0.0" y="58.5" width="382" height="28.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Surname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Xz-if-jUp">
-                            <rect key="frame" x="0.0" y="117" width="382" height="28.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLa-zm-nVG">
+                            <rect key="frame" x="0.0" y="117" width="382" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                            <connections>
+                                <action selector="addButton" destination="-1" eventType="touchUpInside" id="9MI-5P-0pD"/>
+                            </connections>
+                        </button>
                     </subviews>
                 </stackView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sKC-zF-vGK">
+                    <rect key="frame" x="16" y="94" width="382" height="267"/>
+                    <color key="backgroundColor" red="0.61797277709999998" green="0.37730592549999997" blue="0.28394975620000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJP-Xd-okq">
+                    <rect key="frame" x="16" y="801" width="382" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Show Screen"/>
+                    <connections>
+                        <action selector="nextScreenButton" destination="-1" eventType="touchUpInside" id="gSH-5J-U51"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ock-sp-iPZ" secondAttribute="trailing" constant="16" id="Pax-bP-hh5"/>
-                <constraint firstItem="Ock-sp-iPZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="150" id="PyU-MX-iBK"/>
-                <constraint firstItem="Ock-sp-iPZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Sqr-bY-zxS"/>
+                <constraint firstItem="sKC-zF-vGK" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.326406" id="BlL-Lh-1Xj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pJP-Xd-okq" secondAttribute="trailing" constant="16" id="Iu1-iM-2h5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="pJP-Xd-okq" secondAttribute="bottom" constant="30" id="XFf-Pw-usC"/>
+                <constraint firstItem="Ock-sp-iPZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="XVw-Nv-0ss"/>
+                <constraint firstItem="Ock-sp-iPZ" firstAttribute="top" secondItem="sKC-zF-vGK" secondAttribute="bottom" constant="96" id="bf5-TM-CTF"/>
+                <constraint firstItem="sKC-zF-vGK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="cNE-4h-Xzd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ock-sp-iPZ" secondAttribute="trailing" constant="16" id="lgi-By-0HY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sKC-zF-vGK" secondAttribute="trailing" constant="16" id="rtf-wW-HnJ"/>
+                <constraint firstItem="pJP-Xd-okq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="sPZ-qg-4jL"/>
+                <constraint firstItem="sKC-zF-vGK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="tt4-so-kiX"/>
             </constraints>
             <point key="canvasLocation" x="139" y="97"/>
         </view>

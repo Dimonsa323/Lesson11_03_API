@@ -7,19 +7,20 @@
 
 import UIKit
 
-    // MARK: - Class
+// MARK: - Class
 
 class NewHeroVC: UIViewController {
-
+    
     // MARK: - Properties
     
     private let presenter: NewHeroPresenterProtocol
     
+    // MARK: - IBOutlets
     
-    
-    @IBOutlet weak var imageTextField: UITextField!
+    @IBOutlet weak var imageViewOutlet: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var surnameTextField: UITextField!
+    @IBOutlet weak var ageTextField: UITextField!
+    
     
     // MARK: - Init
     
@@ -36,8 +37,21 @@ class NewHeroVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
     
+    // MARK: - IBAction
+    
+    @IBAction func nextScreenButton() {
+        presenter.createUser(vc: self)
+    }
+    
+    @IBAction func addButton() {
+        let name = nameTextField.text ?? ""
+        let age = ageTextField.text ?? ""
+        let newHero = NewHero(name: name, age: age)
+        
+        presenter.createHero(hero: newHero) {
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
 }

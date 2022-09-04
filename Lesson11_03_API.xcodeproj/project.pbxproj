@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		149AB73C28BDDB6600557B63 /* CreateUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149AB73A28BDDB6600557B63 /* CreateUserVC.swift */; };
+		149AB73D28BDDB6600557B63 /* CreateUserVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 149AB73B28BDDB6600557B63 /* CreateUserVC.xib */; };
+		149AB73F28BDDB7700557B63 /* CreateUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149AB73E28BDDB7700557B63 /* CreateUserPresenter.swift */; };
+		149AB74328BDDBA500557B63 /* CreateUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149AB74128BDDBA500557B63 /* CreateUserCell.swift */; };
+		149AB74428BDDBA500557B63 /* CreateUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 149AB74228BDDBA500557B63 /* CreateUserCell.xib */; };
+		149AB74728BDFF8500557B63 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149AB74628BDFF8500557B63 /* ImageView.swift */; };
 		14CBD93128B68434002ABDBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBD93028B68434002ABDBD /* AppDelegate.swift */; };
 		14CBD93328B68434002ABDBD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBD93228B68434002ABDBD /* SceneDelegate.swift */; };
 		14CBD93A28B68436002ABDBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14CBD93928B68436002ABDBD /* Assets.xcassets */; };
@@ -23,9 +29,17 @@
 		14CBD96328B6B65F002ABDBD /* FuturamaPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBD96228B6B65F002ABDBD /* FuturamaPresenter.swift */; };
 		14CBD96728B6B962002ABDBD /* FuturamaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBD96528B6B962002ABDBD /* FuturamaCell.swift */; };
 		14CBD96828B6B962002ABDBD /* FuturamaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14CBD96628B6B962002ABDBD /* FuturamaCell.xib */; };
+		14CBD96A28BB46FC002ABDBD /* NewHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBD96928BB46FB002ABDBD /* NewHero.swift */; };
+		14CBD96C28BB803D002ABDBD /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CBD96B28BB803D002ABDBD /* APIEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		149AB73A28BDDB6600557B63 /* CreateUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserVC.swift; sourceTree = "<group>"; };
+		149AB73B28BDDB6600557B63 /* CreateUserVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateUserVC.xib; sourceTree = "<group>"; };
+		149AB73E28BDDB7700557B63 /* CreateUserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserPresenter.swift; sourceTree = "<group>"; };
+		149AB74128BDDBA500557B63 /* CreateUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserCell.swift; sourceTree = "<group>"; };
+		149AB74228BDDBA500557B63 /* CreateUserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateUserCell.xib; sourceTree = "<group>"; };
+		149AB74628BDFF8500557B63 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		14CBD92D28B68434002ABDBD /* Lesson11_03_API.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lesson11_03_API.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14CBD93028B68434002ABDBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14CBD93228B68434002ABDBD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +58,8 @@
 		14CBD96228B6B65F002ABDBD /* FuturamaPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuturamaPresenter.swift; sourceTree = "<group>"; };
 		14CBD96528B6B962002ABDBD /* FuturamaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuturamaCell.swift; sourceTree = "<group>"; };
 		14CBD96628B6B962002ABDBD /* FuturamaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FuturamaCell.xib; sourceTree = "<group>"; };
+		14CBD96928BB46FB002ABDBD /* NewHero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHero.swift; sourceTree = "<group>"; };
+		14CBD96B28BB803D002ABDBD /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +73,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		149AB73928BDDB2B00557B63 /* CreateUser */ = {
+			isa = PBXGroup;
+			children = (
+				149AB74028BDDB8100557B63 /* CreateUserCell */,
+				149AB73A28BDDB6600557B63 /* CreateUserVC.swift */,
+				149AB73B28BDDB6600557B63 /* CreateUserVC.xib */,
+				149AB73E28BDDB7700557B63 /* CreateUserPresenter.swift */,
+			);
+			path = CreateUser;
+			sourceTree = "<group>";
+		};
+		149AB74028BDDB8100557B63 /* CreateUserCell */ = {
+			isa = PBXGroup;
+			children = (
+				149AB74128BDDBA500557B63 /* CreateUserCell.swift */,
+				149AB74228BDDBA500557B63 /* CreateUserCell.xib */,
+			);
+			path = CreateUserCell;
+			sourceTree = "<group>";
+		};
+		149AB74528BDFE5600557B63 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				149AB74628BDFF8500557B63 /* ImageView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		14CBD92428B68434002ABDBD = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +120,7 @@
 		14CBD92F28B68434002ABDBD /* Lesson11_03_API */ = {
 			isa = PBXGroup;
 			children = (
+				149AB74528BDFE5600557B63 /* Helpers */,
 				14CBD95328B6A508002ABDBD /* Model */,
 				14CBD94928B6854D002ABDBD /* Source */,
 				14CBD94828B68535002ABDBD /* SupportFiles */,
@@ -98,6 +143,7 @@
 		14CBD94628B68520002ABDBD /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				149AB73928BDDB2B00557B63 /* CreateUser */,
 				14CBD95B28B6B610002ABDBD /* NewHeroVC */,
 				14CBD95A28B6B5BE002ABDBD /* FuturamaVC */,
 			);
@@ -143,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				14CBD95128B689EC002ABDBD /* Networking.swift */,
+				14CBD96B28BB803D002ABDBD /* APIEndpoint.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -151,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				14CBD95428B6A520002ABDBD /* Futurama.swift */,
+				14CBD96928BB46FB002ABDBD /* NewHero.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -243,9 +291,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				149AB74428BDDBA500557B63 /* CreateUserCell.xib in Resources */,
 				14CBD95928B6B5B6002ABDBD /* FuturamaVC.xib in Resources */,
 				14CBD93D28B68436002ABDBD /* LaunchScreen.storyboard in Resources */,
 				14CBD93A28B68436002ABDBD /* Assets.xcassets in Resources */,
+				149AB73D28BDDB6600557B63 /* CreateUserVC.xib in Resources */,
 				14CBD95F28B6B637002ABDBD /* NewHeroVC.xib in Resources */,
 				14CBD96828B6B962002ABDBD /* FuturamaCell.xib in Resources */,
 			);
@@ -260,8 +310,13 @@
 			files = (
 				14CBD95828B6B5B6002ABDBD /* FuturamaVC.swift in Sources */,
 				14CBD96328B6B65F002ABDBD /* FuturamaPresenter.swift in Sources */,
+				149AB74328BDDBA500557B63 /* CreateUserCell.swift in Sources */,
+				149AB74728BDFF8500557B63 /* ImageView.swift in Sources */,
 				14CBD95528B6A520002ABDBD /* Futurama.swift in Sources */,
 				14CBD95028B689CF002ABDBD /* Assembler.swift in Sources */,
+				149AB73F28BDDB7700557B63 /* CreateUserPresenter.swift in Sources */,
+				14CBD96A28BB46FC002ABDBD /* NewHero.swift in Sources */,
+				14CBD96C28BB803D002ABDBD /* APIEndpoint.swift in Sources */,
 				14CBD96728B6B962002ABDBD /* FuturamaCell.swift in Sources */,
 				14CBD95E28B6B637002ABDBD /* NewHeroVC.swift in Sources */,
 				14CBD95228B689EC002ABDBD /* Networking.swift in Sources */,
@@ -269,6 +324,7 @@
 				14CBD93328B68434002ABDBD /* SceneDelegate.swift in Sources */,
 				14CBD94E28B689BE002ABDBD /* Navigator.swift in Sources */,
 				14CBD96128B6B651002ABDBD /* NewHeroPresenter.swift in Sources */,
+				149AB73C28BDDB6600557B63 /* CreateUserVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
